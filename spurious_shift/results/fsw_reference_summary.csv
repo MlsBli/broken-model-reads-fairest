@@ -1,0 +1,2 @@
+protocol,alpha,lambda,tau,n_seeds,BalAcc_mean,BalAcc_std,AccParity_mean,AccParity_std,EO_mean,EO_std,WorstGroup_mean,WorstGroup_std
+fixed_reference,0.002,0.5,2.0,10,0.7777,0.0087,0.0374,0.0157,0.0844,0.0283,0.7493,0.0163

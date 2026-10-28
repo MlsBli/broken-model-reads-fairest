@@ -1,0 +1,134 @@
+study,benchmark,subject,metric,value,p_value,p_holm_family,p_holm_pooled,n,note
+E1_permutation,spurious,fair_gem_vs_agem,AccParity,-0.2181,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_gem_vs_agem,EO,-0.2176,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_gem_vs_agem,BalAcc,0.1052,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_gem_vs_agem,WorstGroup,0.2797,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_derpp_vs_der_pp,AccParity,-0.2405,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_derpp_vs_der_pp,EO,-0.2389,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_derpp_vs_der_pp,BalAcc,-0.0301,0.0020,0.0180,0.0340,10,floor=0.0020; favours backbone
+E1_permutation,spurious,fair_derpp_vs_der_pp,WorstGroup,0.1619,0.0020,0.0180,0.0340,10,floor=0.0020; favours ours
+E1_permutation,spurious,fair_gem_sgd_vs_fsw,AccParity,-0.0118,0.3516,0.3516,1.0000,10,floor=0.0020; indistinguishable at 0.05
+E1_permutation,bios,fair_gem_vs_agem,AccParity,0.0023,0.3203,1.0000,1.0000,10,floor=0.0020; favours backbone
+E1_permutation,bios,fair_gem_vs_agem,EO,0.0054,0.2695,1.0000,1.0000,10,floor=0.0020; favours backbone
+E1_permutation,bios,fair_gem_vs_agem,BalAcc,0.0017,0.8027,1.0000,1.0000,10,floor=0.0020; favours ours
+E1_permutation,bios,fair_gem_vs_agem,WorstGroup,0.0002,0.9863,1.0000,1.0000,10,floor=0.0020; favours ours
+E1_permutation,bios,fair_derpp_vs_derpp,AccParity,-0.0000,1.0000,1.0000,1.0000,10,floor=0.0020; favours ours
+E1_permutation,bios,fair_derpp_vs_derpp,EO,0.0114,0.0098,0.0784,0.0882,10,floor=0.0020; favours backbone
+E1_permutation,bios,fair_derpp_vs_derpp,BalAcc,0.0078,0.3125,1.0000,1.0000,10,floor=0.0020; favours ours
+E1_permutation,bios,fair_derpp_vs_derpp,WorstGroup,0.0058,0.4297,1.0000,1.0000,10,floor=0.0020; favours ours
+realized_step,spurious,fair_gem,realized_safety_rate (method-level mean),0.1450,,,,60,fraction of sampled updates whose applied step keeps the half-space
+realized_step,spurious,fair_derpp,realized_safety_rate (method-level mean),0.3169,,,,60,fraction of sampled updates whose applied step keeps the half-space
+E2_equal_accuracy,spurious,common_band,BalAcc reachable by all three,EMPTY,,,,5,"fsw reaches [0.7687,0.7897]; fair_derpp reaches [0.8317,0.8625]; fair_gem reaches [0.6247,0.7784] -- the intersection is empty, so no accuracy target is reachable by all three and the targets below use the union band; at most one method has a value at each"
+E2_equal_accuracy,spurious,balacc=0.625,AccParity,fair_gem=0.0793,,,,5,union-band target; not a comparison
+E2_equal_accuracy,spurious,balacc=0.684,AccParity,fair_gem=0.0871,,,,5,union-band target; not a comparison
+E2_equal_accuracy,spurious,balacc=0.744,AccParity,fair_gem=0.0679,,,,5,union-band target; not a comparison
+E2_equal_accuracy,spurious,balacc=0.803,AccParity,,,,,5,union-band target; not a comparison
+E2_equal_accuracy,spurious,balacc=0.863,AccParity,fair_derpp=0.2639,,,,5,union-band target; not a comparison
+E3_collapse_artifact,bios,joint_retrain,BalAcc_head;EO_head,0.7395;0.1456,,,,10,healthy
+E3_collapse_artifact,bios,finetune,BalAcc_head;EO_head,0.1930;0.0209,,,,10,collapsed
+E3_collapse_artifact,bios,agem,BalAcc_head;EO_head,0.2051;0.0208,,,,10,collapsed
+E3_collapse_artifact,bios,derpp,BalAcc_head;EO_head,0.6507;0.1459,,,,10,healthy
+E3_collapse_artifact,bios,group_dro,BalAcc_head;EO_head,0.1908;0.0183,,,,10,collapsed
+E3_collapse_artifact,bios,fairl,BalAcc_head;EO_head,0.3807;0.0815,,,,10,intermediate
+E3_collapse_artifact,bios,fsw,BalAcc_head;EO_head,0.6498;0.1491,,,,10,healthy
+E3_collapse_artifact,bios,fair_gem,BalAcc_head;EO_head,0.2068;0.0262,,,,10,collapsed
+E3_collapse_artifact,bios,fair_derpp,BalAcc_head;EO_head,0.6585;0.1573,,,,10,healthy
+E4_monitor,spurious,joint_retrain,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=4.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=4.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.05;gap_tol=0.1,acc_alarm=nan;gap_alarm=4.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.05;gap_tol=0.15,acc_alarm=nan;gap_alarm=4.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.05;gap_tol=0.2,acc_alarm=nan;gap_alarm=5.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.1;gap_tol=0.1,acc_alarm=nan;gap_alarm=4.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.1;gap_tol=0.15,acc_alarm=nan;gap_alarm=4.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,joint_retrain,acc_tol=0.1;gap_tol=0.2,acc_alarm=nan;gap_alarm=5.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.10;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,finetune,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.10;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,finetune,acc_tol=0.1;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.10;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.1;gap_tol=0.15,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,finetune,acc_tol=0.1;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,agem,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=3.60;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=3.60;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.1;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.1;gap_tol=0.15,acc_alarm=3.00;gap_alarm=3.60;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,agem,acc_tol=0.1;gap_tol=0.2,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=4.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=4.40;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=3.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=4.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=4.40;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.1;gap_tol=0.1,acc_alarm=nan;gap_alarm=3.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.1;gap_tol=0.15,acc_alarm=nan;gap_alarm=4.00;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,der_pp,acc_tol=0.1;gap_tol=0.2,acc_alarm=nan;gap_alarm=4.40;gap_first=10/10,,,,10,acc silent on 10/10; gap silent on 0/10
+E4_monitor,spurious,group_dro,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.1;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.1;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,group_dro,acc_tol=0.1;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fairl,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=4.33;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 1/10
+E4_monitor,spurious,fairl,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,fairl,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fairl,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=4.33;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 1/10
+E4_monitor,spurious,fairl,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,fairl,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fairl,acc_tol=0.1;gap_tol=0.1,acc_alarm=3.70;gap_alarm=4.33;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 1/10
+E4_monitor,spurious,fairl,acc_tol=0.1;gap_tol=0.15,acc_alarm=3.70;gap_alarm=5.00;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 7/10
+E4_monitor,spurious,fairl,acc_tol=0.1;gap_tol=0.2,acc_alarm=3.70;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.1;gap_tol=0.1,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.1;gap_tol=0.15,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fsw,acc_tol=0.1;gap_tol=0.2,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.05;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.05;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.05;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.1;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.1;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_gem,acc_tol=0.1;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.02;gap_tol=0.1,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.02;gap_tol=0.15,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.02;gap_tol=0.2,acc_alarm=3.00;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 0/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.05;gap_tol=0.1,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.05;gap_tol=0.15,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.05;gap_tol=0.2,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.1;gap_tol=0.1,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.1;gap_tol=0.15,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E4_monitor,spurious,fair_derpp,acc_tol=0.1;gap_tol=0.2,acc_alarm=nan;gap_alarm=nan;gap_first=0/10,,,,10,acc silent on 10/10; gap silent on 10/10
+E5_cost,spurious,joint_retrain,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0420;11.8;2.8,,,,10,relative to der_pp
+E5_cost,spurious,finetune,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0739;-7.6;-1.0,,,,10,relative to der_pp
+E5_cost,spurious,agem,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0254;-2.4;-0.9,,,,10,relative to der_pp
+E5_cost,spurious,group_dro,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.2972;-5.8;-0.2,,,,10,relative to der_pp
+E5_cost,spurious,fairl,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.1399;17.6;1.3,,,,10,relative to der_pp
+E5_cost,spurious,fsw,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.2683;-3.2;-0.1,,,,10,relative to der_pp
+E5_cost,spurious,fair_gem,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.2434;6.9;0.3,,,,10,relative to der_pp
+E5_cost,spurious,fair_derpp,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.2405;6.5;0.3,,,,10,relative to der_pp
+E5_cost,bios,joint_retrain,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0390;1094.2;280.6,,,,10,relative to derpp
+E5_cost,bios,finetune,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0596;-467.4;-78.4,,,,10,relative to derpp
+E5_cost,bios,agem,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0600;-293.3;-48.9,,,,10,relative to derpp
+E5_cost,bios,group_dro,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0609;-537.8;-88.3,,,,10,relative to derpp
+E5_cost,bios,fairl,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0368;-355.2;-96.5,,,,10,relative to derpp
+E5_cost,bios,fsw,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0042;-371.7;-885.0,,,,10,relative to derpp
+E5_cost,bios,fair_gem,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0577;364.2;63.1,,,,10,relative to derpp
+E5_cost,bios,fair_derpp,gap_reduction_vs_replay_backbone;extra_seconds;seconds_per_point,0.0000;474.4;nan,,,,10,relative to derpp
+E6_readout_concordance,bios,finetuned_encoder,spearman_rho__ncm_vs_memory_refit,0.2667,0.493331,,,9,exact two-sided permutation over 362880 rank orderings
+E6_readout_concordance,bios,frozen_encoder,spearman_rho__ncm_vs_memory_refit,0.9167,0.001312,,,9,exact two-sided permutation over 362880 rank orderings

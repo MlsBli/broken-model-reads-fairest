@@ -1,0 +1,10 @@
+benchmark,method,tune_version,objective,trial_budget,completed_trials,best_score,best_params,memory_per_task
+bios,A-GEM,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.29394289,"{""bert_lr"": 4.5477503819816614e-05}",800
+bios,DER++,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.6090187,"{""alpha"": 0.30710573677773717, ""bert_lr"": 2.6975154833351135e-05, ""beta"": 1.7254716573280358}",800
+bios,FAIR-GEM,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.24577019,"{""alpha"": 0.24437525838895208, ""bert_lr"": 2.045610287221892e-05, ""beta"": 1.8105311308911887}",800
+bios,FSW,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.6208121,"{""alpha"": 0.000524833536559974, ""bert_lr"": 3.7895176228853744e-05, ""lmbd"": 0.15314724285373518, ""tau"": 4.379673760750782}",800
+bios,FaIRL,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.4105916,"{""adv_dim"": 64, ""bert_lr"": 1.6557979750342468e-05, ""eps"": 1.989138708576197, ""lam"": 0.1661406088171958}",800
+bios,Fair-DER++,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.61523991,"{""alpha"": 0.2801444283492551, ""bert_lr"": 5.081572060107125e-06, ""beta"": 1.9242870058652546, ""eps_alpha"": 0.37920959915707925, ""eps_beta"": 1.0568737096007825}",800
+bios,Fine-tune,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.19876822,"{""bert_lr"": 7.160849144555761e-06}",800
+bios,GroupDRO,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.20038301,"{""adj"": 2.0997267082736646, ""bert_lr"": 5.0553451864456875e-06, ""eta"": 0.021170810121534184}",800
+bios,Joint Retrain,v6-bios-bert,bal_acc - 0.75 * accuracy_parity_gap,20,20,0.73634668,"{""bert_lr"": 3.674059202635225e-05}",800

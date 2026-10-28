@@ -1,0 +1,9 @@
+benchmark,method,tune_version,objective,trial_budget,completed_trials,best_score,best_params,memory_per_task
+spurious,DER++,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.64925565,"{""alpha"": 0.1724089219582153, ""beta"": 0.17322667470546263}",800
+spurious,FAIR-GEM,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.72010483,"{""alpha"": 0.3793972738151323, ""beta"": 3.1939631788866647}",800
+spurious,FAIR-GEM-SGD,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.73723973,"{""lr"": 0.0030405325392865654}",800
+spurious,FAIRL,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.58128832,"{""adv_dim"": 64, ""eps"": 1.338546446478539, ""lam"": 4.174913969089358}",800
+spurious,FSW,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.76590943,"{""alpha"": 0.0010754441064902479, ""lmbd"": 0.286595105263159, ""tau"": 1.4417041209859551}",800
+spurious,Fair-DER++,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.7920845,"{""alpha"": 1.0459854480992457, ""beta"": 0.26010793594975334, ""eps_alpha"": 0.37531790513118185, ""eps_beta"": 1.1351949312167633}",800
+spurious,Fair-DER++-SGD,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.78280218,"{""lr"": 0.022648248189516832}",800
+spurious,GroupDRO,v8,bal_acc - 0.75 * accuracy_parity_gap,15,15,0.53339232,"{""adj"": 2.8521429192297485, ""eta"": 0.005611516415334507}",800

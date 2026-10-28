@@ -1,0 +1,4 @@
+encoder,probe,n_train,n_test,n_classes,max_length,configured,profession_balacc,gender_auc
+bert-base-uncased,linear_on_frozen_pooled,9000,3000,25,32,1,0.5155,0.9986
+bert-base-uncased,linear_on_frozen_pooled,9000,3000,25,64,0,0.5834,0.9992
+bert-base-uncased,linear_on_frozen_pooled,9000,3000,25,128,0,0.6010,0.9997

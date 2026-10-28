@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+*.db
+
+# Datasets, checkpoints and single-run outputs
+bias_in_bios/data/
+**/results/runs/*/checkpoint*.pt
+**/results/results.npz
+**/results/results_test.npz
+**/results/results_ablations.npz

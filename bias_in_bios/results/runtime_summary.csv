@@ -1,0 +1,10 @@
+method,n_seeds,seeds,total_seconds_mean,total_seconds_std,reference,overhead_ratio_mean,overhead_ratio_std
+joint_retrain,10,0 1 2 3 4 5 6 7 8 9,2052.570,1749.188,,,
+finetune,10,0 1 2 3 4 5 6 7 8 9,490.986,374.817,,,
+agem,10,0 1 2 3 4 5 6 7 8 9,665.087,486.076,,,
+derpp,10,0 1 2 3 4 5 6 7 8 9,958.420,717.356,,,
+group_dro,10,0 1 2 3 4 5 6 7 8 9,420.578,314.629,,,
+fairl,10,0 1 2 3 4 5 6 7 8 9,603.173,447.429,,,
+fsw,10,0 1 2 3 4 5 6 7 8 9,586.730,419.059,,,
+fair_gem,10,0 1 2 3 4 5 6 7 8 9,1322.668,972.695,agem,1.9505,0.2203
+fair_derpp,10,0 1 2 3 4 5 6 7 8 9,1432.780,1129.208,derpp,1.4529,0.1238

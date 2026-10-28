@@ -1,0 +1,19 @@
+# Pinned to the environment the released results were produced in (results depend
+# on torch RNG streams and Optuna's TPE sampler, which change across minor releases).
+# Compatible-release pins (~=) allow patch updates only.
+numpy~=2.4.0
+scikit-learn~=1.9.0
+# scipy is a direct dependency (FSW's LP solver), not just transitive via sklearn
+scipy~=1.17.0
+# torch: install the wheel matching your CUDA driver, e.g.
+#   uv pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+# The bare pin below resolves to the newest CUDA variant, which may need a
+# newer driver than your machine has.
+torch~=2.8.0
+transformers~=5.15.0
+huggingface-hub~=1.27.0
+pandas~=3.0.5
+pyarrow~=25.0.1
+matplotlib~=3.11.1
+optuna~=4.9.0
+tqdm~=4.70.0
